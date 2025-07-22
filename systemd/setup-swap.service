@@ -1,0 +1,11 @@
+[Unit]
+Description=Set up swap on boot
+ConditionVirtualization=no
+
+[Service]
+Type=oneshot
+RemainAfterExit=no
+ExecStart=/usr/share/asahi-scripts/setup-swap.sh
+
+[Install]
+WantedBy=multi-user.target
